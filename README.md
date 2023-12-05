@@ -1,6 +1,6 @@
 # Next.js로 만든 개발 블로그
 
-[✨SOMIN BLOG 보러가기✨]()
+[✨SOMIN BLOG 보러가기✨](https://next-somin-320-blog.s3.ap-northeast-2.amazonaws.com/index.html)
 
 Next.js 학습용 프로젝트입니다. 프론트엔드와 개발에 대한 전반적인 학습 내용을 정리하는 개인 블로그입니다.
 
