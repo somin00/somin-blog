@@ -7,6 +7,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "github.com",
       },
+      {
+        protocol: "https",
+        hostname: "velog.velcdn.com",
+      },
     ],
   },
   webpack: (config) => {
