@@ -1,0 +1,26 @@
+.about {
+  margin: var(--size-20) auto var(--size-10);
+  max-width: 80%;
+}
+
+.about h2 {
+  font-size: var(--size-8);
+  margin: var(--size-4) 0;
+  color: var(--color-grey-800);
+  font-family: "Nunito", sans-serif;
+}
+
+.about p {
+  font-size: var(--size-5);
+  color: var(--color-grey-700);
+  width: 90%;
+}
+
+@media (max-width: 768px) {
+  .about h2 {
+    font-size: var(--size-5);
+  }
+  .about p {
+    font-size: var(--size-4);
+  }
+}

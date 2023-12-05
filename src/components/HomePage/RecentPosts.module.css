@@ -1,0 +1,17 @@
+.latest {
+  width: 80%;
+  padding: var(--size-10) 0;
+  margin: 0 auto;
+  border-top: 1px dashed var(--color-grey-800);
+}
+
+.latest h2 {
+  font-size: var(--size-5);
+  color: var(--color-grey-800);
+}
+
+@media (min-width: 768px) {
+  .latest h2 {
+    font-size: var(--size-6);
+  }
+}
