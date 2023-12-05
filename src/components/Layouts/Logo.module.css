@@ -1,0 +1,12 @@
+.logo {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  font-size: var(--size-4);
+}
+
+@media (min-width: 768px) {
+  .logo {
+    font-size: var(--size-5);
+  }
+}
