@@ -1,7 +1,6 @@
 import { Metadata } from "next";
-import Head from "next/head";
-import AllPosts from "../../components/PostsPage/AllPosts";
-import { getAllPost } from "../../../utils/post";
+import AllPosts from "../components/PostsPage/AllPosts";
+import { getAllPost } from "../utils/post";
 
 export const metadata: Metadata = {
   title: "전체 게시글",

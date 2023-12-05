@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import AboutMe from "@/components/HomePage/AboutMe";
-import RecentPosts from "@/components/HomePage/RecentPosts";
-import { getRecentPosts } from "../../utils/post";
+import AboutMe from "./components/HomePage/AboutMe";
+import RecentPosts from "./components/HomePage/RecentPosts";
+import { getRecentPosts } from "./utils/post";
 
 export const metadata: Metadata = {
   title: "오소민 블로그",

@@ -1,6 +1,6 @@
 import path from "path";
 import matter, { GrayMatterFile } from "gray-matter";
-import { Post, Posts } from "../types";
+import { Post, Posts } from "../../../types";
 import { readFile, readdir } from "fs/promises";
 
 const postsDirectory = path.join(process.cwd(), "posts");

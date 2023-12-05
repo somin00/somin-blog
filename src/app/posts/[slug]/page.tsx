@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import PostContent from "../../../components/Posts/PostDetail/PostContent";
-import { getAllPost, getPostData } from "../../../../utils/post";
+import PostContent from "@/app/components/Posts/PostDetail/PostContent";
+import { getAllPost, getPostData } from "@/app/utils/post";
 
 type Props = {
   params: {
