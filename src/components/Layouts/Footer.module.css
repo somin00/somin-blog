@@ -1,0 +1,20 @@
+.footer {
+  font-family: normal;
+  padding: var(--size-10) 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer a {
+  color: black;
+}
+.github {
+  width: 40px;
+  height: 40px;
+  margin-bottom: var(--size-2);
+}
+
+.footer span {
+  color: var(--color-grey-700);
+}
