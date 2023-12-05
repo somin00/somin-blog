@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import PostContent from "../../../components/Posts/PostDetail/PostContent";
-import { getPostData } from "../../../../utils/post";
+import { getAllPost, getPostData } from "../../../../utils/post";
 
 type Props = {
   params: {
@@ -20,4 +20,12 @@ export const generateMetadata = async ({ params: { slug } }: Props): Promise<Met
 export default async function PostDetailPage({ params: { slug } }: Props) {
   const postData = await getPostData(slug);
   return <PostContent postData={postData || {}} />;
+}
+
+export async function generateStaticParams() {
+  const posts = await getAllPost();
+
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
 }
