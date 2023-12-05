@@ -1,0 +1,16 @@
+.posts {
+  width: 80%;
+  margin: var(--size-8) auto;
+}
+
+.posts h2 {
+  font-size: var(--size-5);
+  color: var(--color-grey-800);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .posts h2 {
+    font-size: var(--size-6);
+  }
+}

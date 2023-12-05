@@ -1,0 +1,31 @@
+.post:hover {
+  background-color: var(--color-primary-50);
+  border-radius: var(--size-5);
+}
+
+.post a {
+  color: var(--color-grey-600);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: var(--size-6) var(--size-4);
+}
+
+.content h3 {
+  font-size: var(--size-5);
+  color: var(--color-grey-900);
+  margin: 0;
+  margin-bottom: var(--size-1);
+}
+
+.content p {
+  margin: 0;
+  margin-bottom: var(--size-3);
+}
+.content time {
+  font-style: italic;
+  color: var(--color-grey-600);
+  font-size: var(--size-3);
+}
