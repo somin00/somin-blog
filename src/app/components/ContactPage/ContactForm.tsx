@@ -3,7 +3,7 @@ import { useState, useEffect, ChangeEvent, FormEvent } from "react";
 import styles from "./ContactForm.module.css";
 import Notification, { NotificationType } from "../ui/notification";
 import { ERROR_NOTIFICATION, PENDING_NOTIFICATION, SUCCESS_NOTIFICATION } from "@/app/costants";
-import { ContactContent } from "../../../../types";
+import { sendMessageApi } from "@/app/utils/action";
 
 const initialFormValue = {
   email: "",
@@ -16,23 +16,6 @@ const initialNotification = {
   title: "",
   message: "",
 };
-
-async function sendContact(formValues: ContactContent) {
-  const response = await fetch("/api", {
-    method: "POST",
-    body: JSON.stringify(formValues),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-  const data = await response.json();
-
-  if (!response.ok) {
-    throw new Error("데이터 저장에 실패했습니다.");
-  }
-
-  return data;
-}
 
 export default function ContactForm() {
   const [formValues, setFormValues] = useState(initialFormValue);
@@ -51,7 +34,7 @@ export default function ContactForm() {
     setNotification(PENDING_NOTIFICATION);
 
     try {
-      const data = await sendContact(formValues);
+      const data = await sendMessageApi(formValues);
       if (!data) return;
       setNotification(SUCCESS_NOTIFICATION);
       setFormValues(initialFormValue);
@@ -78,16 +61,23 @@ export default function ContactForm() {
         <div className={styles.controls}>
           <div className={styles.control}>
             <label htmlFor="email">이메일</label>
-            <input type="email" id="email" value={formValues.email} required onChange={inputInfo}></input>
+            <input type="email" id="email" name="email" value={formValues.email} required onChange={inputInfo}></input>
           </div>
           <div className={styles.control}>
             <label htmlFor="name">이름</label>
-            <input type="text" id="name" value={formValues.name} required onChange={inputInfo}></input>
+            <input type="text" id="name" name="name" value={formValues.name} required onChange={inputInfo}></input>
           </div>
         </div>
         <div className={styles.control}>
           <label htmlFor="message">내용</label>
-          <textarea id="message" rows={5} value={formValues.message} required onChange={inputInfo}></textarea>
+          <textarea
+            id="message"
+            name="message"
+            rows={5}
+            value={formValues.message}
+            required
+            onChange={inputInfo}
+          ></textarea>
         </div>
         <div className={styles.actions}>
           <button>전송</button>
