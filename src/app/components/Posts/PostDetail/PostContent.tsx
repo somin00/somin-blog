@@ -10,7 +10,7 @@ import jsx from "react-syntax-highlighter/dist/cjs/languages/prism/jsx";
 import ts from "react-syntax-highlighter/dist/cjs/languages/prism/typescript";
 import tsx from "react-syntax-highlighter/dist/cjs/languages/prism/tsx";
 import css from "react-syntax-highlighter/dist/cjs/languages/prism/css";
-import { Post } from "../../../../types";
+import { Post } from "../../../../../types";
 
 SyntaxHighlighter.registerLanguage("js", js);
 SyntaxHighlighter.registerLanguage("jsx", jsx);

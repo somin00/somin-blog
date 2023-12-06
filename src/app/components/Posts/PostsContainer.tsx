@@ -1,4 +1,4 @@
-import { Posts } from "../../../types";
+import { Posts } from "../../../../types";
 import PostItem from "./PostItem";
 import styles from "./PostsContainer.module.css";
 

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./PostItem.module.css";
-import { Post } from "../../../types";
+import { Post } from "../../../../types";
 
 export default function PostItem({ post }: { post: Post }) {
   const { title, description, date, slug } = post;
