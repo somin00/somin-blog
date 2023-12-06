@@ -2,7 +2,7 @@ import { createPortal } from "react-dom";
 
 import styles from "./notification.module.css";
 
-type NotificationType = {
+export type NotificationType = {
   title: string;
   message: string;
   status: string;
