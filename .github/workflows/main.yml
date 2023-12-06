@@ -1,40 +1,25 @@
-name: Deploy to Production
-    
-on:
-  push:
-    branches:
-      - main
+name: Deploy
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+on: [push]
 
 jobs:
-  deploy:
-    name: Build, Deploy to S3 bucket
-    runs-on: [ubuntu-latest]
-
-    strategy:
-      matrix:
-        node-version: [20.9.x]
-
+  cron:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
+      - name: Install Vercel CLI (Vercel CLI 설치)
+        run: npm install vercel@latest
 
-      - name: Npm install
-        run: npm install
+      - name: Pull Vercel Environment Information (Vercel 원격 환경에서 환경 변수 및 프로젝트 설정을 가져오기)
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
-      - name: Build
-        run: npm run build
+      - name: Build Project Artifacts (프로젝트 빌드)
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
 
-      - name: Transfer to S3 for serving static
-        uses: jakejarvis/s3-sync-action@master
-        with:
-          args: --acl public-read --follow-symlinks --delete
-        env:
-          AWS_S3_BUCKET: ${{secrets.AWS_S3_BUCKET}}
-          AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
-          AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
-          AWS_REGION: 'ap-northeast-2'
-          SOURCE_DIR: 'out'
+      - name: Deploy Project Artifacts to Vercel (프로젝트를 배포)
+        run: vercel deploy --prebuilt --prod  --token=${{ secrets.VERCEL_TOKEN }}
