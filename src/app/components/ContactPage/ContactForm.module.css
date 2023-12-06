@@ -49,16 +49,11 @@
 }
 
 .form button {
-  background-color: var(--color-primary-100);
+  background-color: var(--color-primary-200);
   border: none;
   padding: var(--size-2) var(--size-4);
   border-radius: 4px;
   font-size: var(--size-5);
-  color: white;
-}
-
-.form button:hover {
-  background-color: var(--color-primary-200);
   color: black;
 }
 
