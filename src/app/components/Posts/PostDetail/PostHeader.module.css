@@ -15,7 +15,7 @@
 }
 
 .header time {
-  color: var(--color-grey-300);
+  color: var(--color-grey-600);
 }
 
 @media (min-width: 768px) {
