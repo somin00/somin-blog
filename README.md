@@ -40,14 +40,14 @@ Next.js 학습용 프로젝트입니다. 프론트엔드와 개발에 대한 전
 
 vscode에서 md파일로 작성하면 파일시스템 모듈을 사용해 게시하는 방식으로 구현했습니다. 개인 블로그이기 때문에 글 작성하는 기능은 구현하지 않았습니다.
 
-[블로그 글 관련 기능 코드 보기](https://github.com/somin00/next-blog/blob/main/utils/post.ts)
+[블로그 글 관련 기능 코드 보기](https://github.com/somin00/somin-blog/blob/main/src/app/utils/post.ts)
 
 &nbsp;
 
 마크다운으로 작성한 내용을 파싱하기 위해 `react-markdown`
 `react-syntax-highlighter` 를 사용했습니다.
 
-[마크다운 라이브러리 사용 코드 보기](https://github.com/somin00/next-blog/blob/main/components/Posts/PostDetail/PostContent.tsx)
+[마크다운 라이브러리 사용 코드 보기](https://github.com/somin00/somin-blog/blob/main/src/app/components/Posts/PostDetail/PostContent.tsx)
 
 &nbsp;
 
