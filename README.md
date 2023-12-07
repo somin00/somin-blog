@@ -28,7 +28,6 @@ Next.js 학습용 프로젝트입니다. 프론트엔드와 개발에 대한 전
 블로그 개발에 대해 궁금한 점 또는 조언 등 자유롭게 글을 작성할 수 있는 페이지입니다.
 <img width="1440" alt="문의페이지" src="https://github.com/somin00/next-blog/assets/61578822/758c489e-45de-4232-9234-9ab899f6f730">  
 &nbsp;
-문의 페이지 개선 중으로 작성 기능은 작동하지 않습니다.👏🏻
 
 &nbsp;
 
@@ -40,14 +39,14 @@ Next.js 학습용 프로젝트입니다. 프론트엔드와 개발에 대한 전
 
 vscode에서 md파일로 작성하면 파일시스템 모듈을 사용해 게시하는 방식으로 구현했습니다. 개인 블로그이기 때문에 글 작성하는 기능은 구현하지 않았습니다.
 
-[블로그 글 관련 기능 코드 보기](https://github.com/somin00/somin-blog/blob/main/src/app/utils/post.ts)
+[코드 보기](https://github.com/somin00/somin-blog/blob/main/src/app/utils/post.ts)
 
 &nbsp;
 
 마크다운으로 작성한 내용을 파싱하기 위해 `react-markdown`
 `react-syntax-highlighter` 를 사용했습니다.
 
-[마크다운 라이브러리 사용 코드 보기](https://github.com/somin00/somin-blog/blob/main/src/app/components/Posts/PostDetail/PostContent.tsx)
+[코드 보기](https://github.com/somin00/somin-blog/blob/main/src/app/components/Posts/PostDetail/PostContent.tsx)
 
 &nbsp;
 
@@ -76,3 +75,15 @@ posts/[slug] 파일의 빌드 결과를 보면 코드의 양이 많이 줄었음
 md 파일 파싱할 때 이미지의 크기를 동적으로 설정하고 싶었지만 이미지 사이즈를 추출하는 방식을 찾지 못했습니다. md 파일 alt 속성에 이미지 사이즈를 작성하면 정규표현식을 이용하여 추출한 다음 Image width, height로 설정하는 방식으로 구현했습니다. 이미지를 보기 좋게 렌더링 하기 위해서는 사이즈를 알아야 한다는 점이 아쉽습니다.
 
 &nbsp;
+
+### **문의 관련 기능**
+
+**1. 글 작성 기능**
+
+MongoDB를 사용하여 문의 내용 저장 기능을 구현했습니다.
+
+[코드 보기](https://github.com/somin00/somin-blog/blob/main/src/app/utils/action.ts)
+
+[데이터베이스에 저장된 데이터]
+
+<img width="847" alt="문의" src="https://github.com/somin00/next-blog/assets/61578822/4b9f2075-2806-4994-9bf1-0864e1d50585">
