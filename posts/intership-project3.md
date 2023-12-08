@@ -2,7 +2,6 @@
 title: "인턴십 프로젝트 3주차 - 디바운싱, 로컬캐싱"
 date: "2023-10-05"
 description: "API 호출에 대한 디바운싱, 로컬 캐싱 기능 구현 기록"
-isFeatured: false
 ---
 
 3주 차 과제도 역시 개인 과제를 하고 Best Practice를 도출하는 방식으로 진행했다. 구현해야 할 기능은 사용자가 입력한 검색어에 맞는 추천 검색어 보여주기이다. 기능 요구 사항 중 API 호출 횟수 줄이기, API 호출별 로컬 캐싱 구현하기에 대해 구현 방법과 개선 방법을 정리해 보았다.  
@@ -90,7 +89,7 @@ export const getSearchWords = async (debouncedValue: string) => {
 };
 ```
 
-![cache {204x97}](https://github.com/somin00/next-blog/assets/61578822/f3dafe6c-6fb0-48d3-85c8-c02ae33f1723)
+![cache {204x97}](https://github.com/somin00/somin-blog/assets/61578822/a9a73d84-0c1a-4020-a36d-10d9e7219554)
 &nbsp;
 
 Best Practice 도출 시 API base url을 캐시 이름으로 설정하여 저장 공간은 하나만 만들고 그 안에 단어 별로 저장하는 방식으로 수정하였다.
@@ -109,6 +108,6 @@ export const getRecommendedKeywords = async (keyword: string) => {
 };
 ```
 
-![localcaching {658x61}](https://github.com/somin00/next-blog/assets/61578822/7b718bae-90f5-4ab3-a2f4-a98cfab9d413)
+![cache storage {658x61}](https://github.com/somin00/somin-blog/assets/61578822/5c0ffd70-5194-4d1c-81f9-7743ba8b5c48)
 
 코드 상으로 차이는 거의 없지만 수정한 방식이 캐시 저장 현황을 더 알기 쉽다는 장점이 있어서 수정했다.

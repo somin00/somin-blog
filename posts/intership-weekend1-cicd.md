@@ -1,8 +1,7 @@
 ---
-title: "인턴십 프로젝트 1주차 - CI/CD"
+title: "인턴십 1주차 복습 - CI/CD"
 date: "2023-08-28"
 description: "GitHub Actions를 이용한 CI/CD 환경 구축하기"
-isFeatured: false
 ---
 
 금요일 자정 Best Practice 과제 제출을 끝내고 주말은 1주 차 내용을 복습했다. 1주 차에는 eslint, prettier, husky, CI/CD를 배웠다. 과제 프로젝트 환경 설정을 담당해서 eslint, prettier, husky는 자연스럽게 복습을 하게 되어 CI/CD 내용에 더 집중했다.  
