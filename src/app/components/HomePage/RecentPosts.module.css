@@ -10,6 +10,15 @@
   color: var(--color-grey-800);
 }
 
+.link {
+  display: flex;
+  justify-content: center;
+  color: var(--color-grey-800);
+  margin-top: var(--size-10);
+  padding-bottom: var(--size-10);
+  border-bottom: 1px dashed var(--color-grey-400);
+}
+
 @media (min-width: 768px) {
   .latest h2 {
     font-size: var(--size-6);
