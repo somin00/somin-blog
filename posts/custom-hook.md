@@ -2,6 +2,7 @@
 title: "커스텀 훅을 이용한 관심사의 분리"
 date: "2023-09-20"
 description: "React Custom hook을 이용하여 관심사 분리하기"
+category: "리액트"
 ---
 
 ### 관심사의 분리 SOC (Seperation of Concerns)

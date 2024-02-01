@@ -2,6 +2,7 @@
 title: "NextAuth를 이용한 로그인, 로그아웃 구현하기"
 date: "2023-11-17"
 description: "NextAuth를 이용한 로그인, 로그아웃, 리디렉션 기능 구현 내용 정리"
+category: "next.js"
 ---
 
 next-auth를 이용하여 회원가입, 로그인, 로그아웃 등 사용자 인증 관련 기능 구현을 해보았다.  

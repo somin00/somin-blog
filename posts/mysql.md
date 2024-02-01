@@ -2,6 +2,7 @@
 title: "node, express, MySQL로 투두리스트 서버 개선하기"
 date: "2024-01-09"
 description: "투두리스트 프론트에 서버 연결하기 (feat. redux-toolkit)"
+category: "node"
 ---
 
 지난 포스트에서 node.js express를 이용하여 투두리스트 서버를 만든 내용을 정리했다. 데이터베이스에 대해 아주 얕게 알고 있기 때문에 좀 더 공부를 하고 개선을 하려고 했는데 투두리스트 정도는 아는 선에서 가능할 것 같아 바로 mysql을 연결해 보았다.

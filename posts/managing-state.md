@@ -2,6 +2,7 @@
 title: "공식 문서 읽기  Managing State"
 date: "2023-10-26"
 description: "React state에 대해 알아보기"
+category: "리액트"
 ---
 
 훅의 작동 원리에 대해 정확하게 알아보고자 공식 문서를 봤다가 기본 내용도 짚고 넘어가면 좋을 것 같아서 학습하기 부분부터 천천히 읽기 시작했다.

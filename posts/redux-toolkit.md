@@ -2,6 +2,7 @@
 title: "redux-toolkit을 사용한 비동기 통신 처리하기"
 date: "2024-01-10"
 description: "redux-toolkit을 이용하여 서버에 api 요청 보내기"
+category: "리액트 리덕스"
 ---
 
 redux-toolkit을 연습하고자 서버 연결하지 않은 상태에서 적용했었다. 서버를 연결하고 나서는 비동기 통신이 필요하기 때문에 redux-thunk릉 사용해야 해서 redux-toolkit과 관련된 모든 코드를 수정했다. 수정 전 코드와 수정 후 코드에 대해 정리했다.  

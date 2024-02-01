@@ -2,6 +2,7 @@
 title: "node, express, typescript로 CRUD 구현하기"
 date: "2024-01-08"
 description: "Node.js, express, typescript를 이용하여 투두리스트 CRUD API 구현"
+category: "node typescript"
 ---
 
 타입스크립트 강의를 들으면서 node.js express를 이용하여 투두리스트에 사용 가능한 서버를 만들어 보았다.

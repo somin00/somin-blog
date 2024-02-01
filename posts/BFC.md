@@ -2,6 +2,7 @@
 title: "Margin Collapsing 현상"
 date: "2023-12-11"
 description: "css margin collapsing 현상이 언제 나타나는지와 해결 방법"
+category: "css"
 ---
 
 GitHub에서 프론트엔드 관련 필수 지식에 대해 정리해놓 것을 보다가 당연하다고 생각했더 Margin Collapsing에 대해 자세하게 적어 놓은 글을 보고 잊어버리지 않기 위해 정리했다.  

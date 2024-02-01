@@ -2,6 +2,7 @@
 title: "Next.js 렌더링 방식"
 date: "2023-11-17"
 description: "Next.js의 렌더링 방식인 SSR, SSG, ISR에 대한 내용 정리"
+category: "next.js"
 ---
 
 Next.js에 대해 학습하면서 리액트와 가장 큰 차이점인 렌더링 방식에 대해 정리해보았다.

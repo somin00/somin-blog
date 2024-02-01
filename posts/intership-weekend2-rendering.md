@@ -2,6 +2,7 @@
 title: "인턴십 2주차 복습- 렌더링 최적화"
 date: "2023-09-14"
 description: "리액트 렌더링 최적화를 위한 React.memo, useMemo, useCallback 알아보기"
+category: "인턴십 리액트"
 ---
 
 렌더링은 화면에 요소를 그리는 것이다. HTML, CSS로 화면에 그린 것을 브라우저 DOM API를 JavaScript를 이용해 화면을 변화시킨다. 바닐라 자바스크립트를 이용해서 DOM 요소에 직접 접근하고 수정하는 것을 더 쉽게 하기 위해 React, Vue, Angular등의 라이브러리, 프레임워크를 사용한다.  

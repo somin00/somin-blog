@@ -2,6 +2,7 @@
 title: "함수 호출 방식에 따른 this 바인딩"
 date: "2023-11-29"
 description: "javascript에서 함수 호출 방식에 따라 this가 바인딩되는 방식에 대한 학습 내용 정리"
+category: "javascript"
 ---
 
 this가 호출되는 방식에 따라 어떤 객체와 바인딩되는 지에 대해 정리했다.
