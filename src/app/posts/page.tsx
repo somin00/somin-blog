@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import AllPosts from "../components/PostsPage/AllPosts";
-import { getAllPost } from "../utils/post";
+import { getAllPost, getCategory } from "../utils/post";
 
 export const metadata: Metadata = {
   title: "전체 게시글",
@@ -9,5 +9,6 @@ export const metadata: Metadata = {
 
 export default async function AllPostPage() {
   const allPost = await getAllPost();
-  return <AllPosts posts={allPost} />;
+  const categories = await getCategory();
+  return <AllPosts posts={allPost} categories={categories} />;
 }

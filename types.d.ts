@@ -15,3 +15,8 @@ export type ResponseJsonType = {
   message: string;
   data?: ContactContent;
 };
+
+export type Category = {
+  id: number;
+  category: string;
+};

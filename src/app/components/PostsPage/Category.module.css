@@ -1,0 +1,10 @@
+.container {
+  margin-bottom: var(--size-5);
+}
+
+.container select {
+  display: block;
+  width: var(--size-40);
+  height: 30px;
+  margin-left: auto;
+}
