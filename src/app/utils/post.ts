@@ -1,6 +1,6 @@
 import path from "path";
 import matter, { GrayMatterFile } from "gray-matter";
-import { Post, Posts } from "../../../types";
+import { Category, Post, Posts } from "../../../types";
 import { readFile, readdir } from "fs/promises";
 
 const postsDirectory = path.join(process.cwd(), "posts");
@@ -38,4 +38,18 @@ export const getRecentPosts = async (): Promise<Posts> => {
   const allPost: Posts = await getAllPost();
   const recentPosts: Posts = allPost.slice(0, 5);
   return recentPosts;
+};
+
+export const getCategory = async (): Promise<Category[]> => {
+  const allPost: Posts = await getAllPost();
+  const categorySet: Set<string> = new Set();
+  allPost.forEach((post) => {
+    if (post.category) {
+      post.category.split(" ").map((category) => {
+        categorySet.add(category);
+      });
+    }
+  });
+  const categories = [...categorySet].sort().map((category, idx) => ({ id: idx, category }));
+  return [{ id: 100, category: "전체" }, ...categories];
 };
