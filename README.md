@@ -15,13 +15,13 @@ Next.js 학습용 프로젝트입니다. 프론트엔드와 개발에 대한 전
 ## 🍀ABOUT BLOG
 
 **메인페이지**  
-개인 소개 및 최근 작성한 게시물 5개를 보여줍니다.
-<img width="1440" alt="메인페이지" src="https://github.com/somin00/next-blog/assets/61578822/84ef33b5-7aad-4569-862d-8cc522a7aaa1">  
+개인 소개 및 최근 작성한 게시물 5개를 보여줍니다. 하단 링크를 통해 게시글 목록 페이지로 이동할 수 있습니다.
+![메인페이지](https://github.com/somin00/somin-blog/assets/61578822/0fc67807-9108-4f30-8a2c-fd305c3a0716)
 &nbsp;
 
 **Posts 게시물 페이지**  
-작성한 모든 게시물 목록을 보여줍니다.
-<img width="1440" alt="포스트페이지" src="https://github.com/somin00/next-blog/assets/61578822/08dbae90-5a01-4060-94e4-91145eb4dbb1">  
+작성한 모든 게시물 목록을 보여줍니다. 카테고리 선택이 가능합니다. 
+![게시글 목록 페이지](https://github.com/somin00/somin-blog/assets/61578822/834dd80d-6566-4ca9-9550-9ba1386bd4ee)
 &nbsp;
 
 **Contact 문의 페이지**  
@@ -47,6 +47,14 @@ vscode에서 md파일로 작성하면 파일시스템 모듈을 사용해 게시
 `react-syntax-highlighter` 를 사용했습니다.
 
 [코드 보기](https://github.com/somin00/somin-blog/blob/main/src/app/components/Posts/PostDetail/PostContent.tsx)
+
+&nbsp;
+
+**2. 카테고리 선택 기능**  
+
+파일시스템 모듈로 가져온 게시글 category 정보를 사용했습니다. 카테고리 목록은 중복을 없애고 게시글 목록을 렌더링 할 때 카테고리에 해당하는 게시글을 렌더링 하도록 구현했습니다. 각 게시글은 여러 카테고리를 가질 수 있으며 해당하는 모든 카테고리 목록에 보여집니다.  
+
+[코드 보기](https://github.com/somin00/somin-blog/blob/main/src/app/utils/post.ts)
 
 &nbsp;
 
