@@ -15,3 +15,5 @@ export const ERROR_NOTIFICATION = Object.freeze({
   title: "실패",
   message: "메세지 전송을 실패했습니다.",
 });
+
+export const ALL_POSTS = "전체";

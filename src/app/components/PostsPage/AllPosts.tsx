@@ -4,9 +4,10 @@ import { Category, Posts } from "../../../../types";
 import PostsContainer from "../Posts/PostsContainer";
 import styles from "./AllPosts.module.css";
 import CategoryList from "./Category";
+import { ALL_POSTS } from "@/app/costants";
 
 export default function AllPosts({ posts, categories }: { posts: Posts; categories: Category[] }) {
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState(ALL_POSTS);
 
   const selectCategory = (e: SyntheticEvent) => {
     setSelectedCategory((e.target as HTMLSelectElement).value);
