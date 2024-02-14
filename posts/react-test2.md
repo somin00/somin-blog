@@ -172,6 +172,27 @@ category: "리액트 테스트"
   });
   ```
 
-  &nbsp;
+&nbsp;
 
-  아직 기초라 흥미롭다!! 테스트 코드를 먼저 짜고 테스트를 통과하도록 소스 코드를 작성하니까 제대로 작동하고 있다는 확신도 들고, 직접 브라우저를 실행해서 테스트하지 않아도 되는 것이 좋았다. 어려워지면 어떨지 모르겠지만…아직 즐겁다😆
+### Query 사용 우선 순위
+
+모든 접근성을 고려한 테스트를 진행할 수 있도록 우선순위를 제공하고 있다.
+
+참고) [https://testing-library.com/docs/queries/about/#priority](https://testing-library.com/docs/queries/about/#priority)
+
+- getByRole
+- getByLabelText
+- getbyPlaceholderText
+- getbyText
+
+지난번 사용했던 getByTestId는 사용자가 알 수 없는 것이다. role, text 같은 것들로 접근할 수 없는 경우에 사용하는 것이 좋다.
+
+&nbsp;
+
+### fireEvent보다 userEvent
+
+userEvent는 fireEvent로 만들어진 것이다. 엘리먼트 타입에 따라 Label을 클릭했을 때, checkbox, radio를 클릭했을 때 더 적절한 반응을 한다. fireEvent는 click 이벤트 발생 시 버튼에 focus가 되지 않지만 userEvent는 버튼에 포커스 된다. 테스트는 최대한 사용자의 관점과 비슷하게 진행되어야 하기 때문에 userEvent 사용이 추천된다.
+
+&nbsp;
+
+아직 기초라 흥미롭다!! 테스트 코드를 먼저 짜고 테스트를 통과하도록 소스 코드를 작성하니까 제대로 작동하고 있다는 확신도 들고, 직접 브라우저를 실행해서 테스트하지 않아도 되는 것이 좋았다. 어려워지면 어떨지 모르겠지만…아직 즐겁다😆
